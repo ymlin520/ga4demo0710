@@ -1,0 +1,87 @@
+{
+  "status": "ok",
+  "statusLabel": "資料已同步",
+  "statusMessage": "GA4 與 GSC 指標已完成更新",
+  "rangeLabel": "近 28 天",
+  "gscSite": "https://example.com/",
+  "overviewCards": [
+    {"label": "工作階段", "value": "12,480", "sub": "GA4 sessions", "change": "+12.4%", "direction": "up", "tone": "good"},
+    {"label": "使用者", "value": "9,302", "sub": "GA4 totalUsers"},
+    {"label": "瀏覽量", "value": "24,911", "sub": "GA4 screenPageViews"}
+  ],
+  "gscCards": [
+    {"label": "搜尋點擊", "value": "3,812", "sub": "GSC clicks"},
+    {"label": "搜尋曝光", "value": "128,440", "sub": "GSC impressions"},
+    {"label": "CTR", "value": "2.97%", "sub": "GSC ctr"}
+  ],
+  "countries": [
+    {"name": "Taiwan", "value": "5,120", "icon": "🌏"},
+    {"name": "Hong Kong", "value": "1,340", "icon": "🌏"},
+    {"name": "Japan", "value": "622", "icon": "🌏"}
+  ],
+  "referrals": [
+    {"name": "google", "value": "2,422", "icon": "↗"},
+    {"name": "facebook", "value": "812", "icon": "↗"},
+    {"name": "chatgpt.com", "value": "364", "icon": "↗"}
+  ],
+  "topPages": [
+    {"title": "/blog/ai-course", "views": "1,842"},
+    {"title": "/preorder-online-class/", "views": "1,219"},
+    {"title": "/", "views": "1,102"}
+  ],
+  "deviceLegend": [
+    {"label": "mobile", "percent": "72%", "color": "#63b9d1"},
+    {"label": "desktop", "percent": "24%", "color": "#5b24ff"},
+    {"label": "tablet", "percent": "4%", "color": "#f59e0b"}
+  ],
+  "deviceModels": [
+    {"name": "iPhone", "value": "2,204"},
+    {"name": "SM-S928B", "value": "622"},
+    {"name": "Macintosh", "value": "588"}
+  ],
+  "screenResolutions": [
+    {"name": "390x844", "value": "1,921"},
+    {"name": "393x852", "value": "1,011"},
+    {"name": "1920x1080", "value": "820"}
+  ],
+  "newVsReturning": {
+    "new": 4200,
+    "returning": 1100,
+    "new_pct": 79,
+    "returning_pct": 21
+  },
+  "charts": {
+    "labels": ["06/01", "06/02", "06/03", "06/04", "06/05", "06/06", "06/07"],
+    "sessions": [220, 245, 238, 290, 310, 284, 330],
+    "views": [460, 502, 488, 566, 610, 580, 642],
+    "gscClicks": [38, 41, 40, 52, 57, 55, 61],
+    "gscImpressions": [1420, 1510, 1492, 1640, 1701, 1680, 1815],
+    "gscPosition": [14.2, 13.9, 13.7, 13.2, 12.8, 12.9, 12.5],
+    "channelLabels": ["Organic Search", "Direct", "Referral", "Social"],
+    "channelValues": [1820, 1330, 604, 470],
+    "deviceLabels": ["mobile", "desktop", "tablet"],
+    "deviceValues": [72, 24, 4],
+    "deviceColors": ["#63b9d1", "#5b24ff", "#f59e0b"]
+  },
+  "realtime": {
+    "active_30m": 18,
+    "active_5m": 6,
+    "recentActiveUsers": 18,
+    "top_pages": [
+      {"title": "/", "activeUsers": "6"},
+      {"title": "/course", "activeUsers": "4"},
+      {"title": "/blog/ai-course", "activeUsers": "3"},
+      {"title": "/preorder-online-class/", "activeUsers": "2"}
+    ]
+  },
+  "gscQueries": [
+    {"label": "ai 課程", "value": "182"},
+    {"label": "數位分身", "value": "121"},
+    {"label": "hermes agent", "value": "98"}
+  ],
+  "gscPages": [
+    {"label": "/blog/ai-course", "value": "140"},
+    {"label": "/blog/hermes-agent-guide", "value": "118"},
+    {"label": "/preorder-online-class/", "value": "93"}
+  ]
+}

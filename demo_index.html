@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GA4 + GSC Dashboard Demo</title>
+  <style>
+    :root{
+      --bg:#f3f8ff;--card:#fff;--border:#d9e8ff;--soft:#eaf2ff;--text:#0f2747;--muted:#60738d;
+      --blue:#1f7ae0;--teal:#0fb5c8;--violet:#5b24ff;--shadow:0 12px 28px rgba(30,98,178,.08)
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+    .wrap{max-width:1480px;margin:0 auto;padding:24px}
+    .hero{display:grid;grid-template-columns:1.4fr .8fr;gap:16px;margin-bottom:18px}
+    .hero-card,.panel,.metric-card,.list-card,.realtime-card{background:var(--card);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow)}
+    .hero-card{padding:24px;background:linear-gradient(135deg,#e9f5ff 0%,#f8fcff 100%);position:relative;overflow:hidden}
+    .hero-card h1{margin:0;font-size:38px;line-height:1.1;font-weight:900;background:linear-gradient(90deg,var(--blue),var(--teal));-webkit-background-clip:text;color:transparent}
+    .hero-card p{margin:14px 0 0;color:#264466;font-size:15px;line-height:1.7;max-width:760px}
+    .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+    .pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:7px 12px;background:linear-gradient(90deg,var(--blue),var(--teal));color:#fff;font-size:12px;font-weight:800}
+    .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .meta span{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;background:rgba(255,255,255,.82);border:1px solid var(--border);border-radius:999px;color:#4d6788;font-size:12px;font-weight:700}
+    .status{padding:20px}
+    .status h2{margin:0 0 10px;font-size:16px}
+    .status strong{display:block;font-size:34px;color:var(--blue)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:18px}
+    .metric-card{padding:18px}
+    .metric-card .label{color:#59708f;font-size:13px;font-weight:800}
+    .metric-card .value{margin-top:10px;font-size:30px;font-weight:900;color:#0b2d53}
+    .metric-card .sub{margin-top:8px;color:var(--muted);font-size:13px}
+    .section{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-bottom:18px}
+    .panel{padding:20px}
+    .panel h2,.list-card h2,.realtime-card h2{margin:0 0 14px;font-size:16px}
+    .mini-chart{display:grid;grid-template-columns:repeat(7,1fr);align-items:end;gap:10px;height:240px;margin-top:18px}
+    .bar-group{display:flex;flex-direction:column;align-items:center;gap:8px}
+    .bars{display:flex;align-items:end;gap:5px;height:180px}
+    .bar{width:16px;border-radius:10px 10px 4px 4px;background:var(--blue)}
+    .bar.alt{background:var(--teal)}
+    .xlab{font-size:11px;color:var(--muted);font-weight:700}
+    .legend{display:grid;gap:10px}
+    .legend-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-top:1px solid var(--soft)}
+    .legend-row:first-child{border-top:0}
+    .left{display:flex;align-items:center;gap:10px;font-weight:800;color:#17345d}
+    .dot{width:12px;height:12px;border-radius:50%}
+    .list-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:18px}
+    .list-card{padding:18px}
+    ol.rank{list-style:none;padding:0;margin:0;counter-reset:item}
+    .rank li{counter-increment:item;display:grid;grid-template-columns:minmax(0,1fr) max-content;gap:12px;padding:13px 0;border-top:1px solid var(--soft)}
+    .rank li:first-child{border-top:0}
+    .rank .title{font-weight:800;color:#163964;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .rank .title::before{content:counter(item) ". ";color:#6b86a8}
+    .rank .value{font-weight:800;color:#4a6689}
+    .realtime-wrap{display:grid;grid-template-columns:.7fr 1.3fr;gap:16px;margin-bottom:18px}
+    .realtime-card{padding:18px}
+    .live{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid #dff3ff;background:#f4fbff;color:var(--blue);font-size:12px;font-weight:900}
+    .live i{display:block;width:10px;height:10px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 5px rgba(22,163,74,.12)}
+    .big-num{font-size:42px;font-weight:900;margin:14px 0 6px;color:#0c2a4c}
+    .split{display:flex;gap:14px;align-items:center;justify-content:space-between}
+    .progress{height:14px;background:#eef4ff;border-radius:999px;overflow:hidden;margin-top:12px}
+    .progress > span{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--teal))}
+    .footer-note{color:var(--muted);font-size:13px;margin-top:18px}
+    @media (max-width: 980px){
+      .hero,.grid-3,.section,.list-grid,.realtime-wrap{grid-template-columns:1fr}
+      .mini-chart{gap:6px}
+      .bar{width:12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" id="app">載入中...</div>
+  <script>
+    async function loadPayload(){
+      const res = await fetch('../examples/payload.example.json');
+      return await res.json();
+    }
+
+    function metricCards(cards){
+      return cards.map(card => `
+        <div class="metric-card">
+          <div class="label">${card.label}</div>
+          <div class="value">${card.value}</div>
+          <div class="sub">${card.sub || ''}</div>
+        </div>
+      `).join('');
+    }
+
+    function rankList(title, rows, keyLabel='label', keyValue='value'){
+      return `
+        <div class="list-card">
+          <h2>${title}</h2>
+          <ol class="rank">
+            ${rows.map(r => `<li><div class="title">${r[keyLabel] || r.title || r.name}</div><div class="value">${r[keyValue] || r.views || ''}</div></li>`).join('')}
+          </ol>
+        </div>
+      `;
+    }
+
+    function trendBars(labels, sessions, views){
+      const max = Math.max(...sessions, ...views, 1);
+      return labels.map((label, i) => {
+        const s = Math.max(10, Math.round((sessions[i] / max) * 160));
+        const v = Math.max(10, Math.round((views[i] / max) * 160));
+        return `
+          <div class="bar-group">
+            <div class="bars">
+              <div class="bar" style="height:${s}px"></div>
+              <div class="bar alt" style="height:${v}px"></div>
+            </div>
+            <div class="xlab">${label}</div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function deviceLegend(rows){
+      return rows.map(r => `
+        <div class="legend-row">
+          <div class="left"><span class="dot" style="background:${r.color}"></span>${r.label}</div>
+          <div class="value">${r.percent}</div>
+        </div>
+      `).join('');
+    }
+
+    function render(data){
+      const app = document.getElementById('app');
+      app.innerHTML = `
+        <section class="hero">
+          <div class="hero-card">
+            <div class="pill-row">
+              <span class="pill">GA4 + GSC</span>
+              <span class="pill">Universal Dashboard</span>
+            </div>
+            <h1>智慧量子數據指揮中心</h1>
+            <p>這是一個從 WordPress 後台儀表板抽離出來的通用版前台介面。相同 payload 可重用於 HTML 網站、WordPress 後台或任何自訂系統。</p>
+            <div class="meta">
+              <span>狀態：${data.statusLabel}</span>
+              <span>範圍：${data.rangeLabel}</span>
+              <span>GSC Site：${data.gscSite}</span>
+            </div>
+          </div>
+          <div class="hero-card status">
+            <h2>同步狀態</h2>
+            <span class="live"><i></i> LIVE READY</span>
+            <strong>${data.realtime.active_30m}</strong>
+            <div class="sub">最近 30 分鐘活躍使用者</div>
+            <div class="footer-note">${data.statusMessage}</div>
+          </div>
+        </section>
+
+        <section class="grid-3">${metricCards(data.overviewCards)}</section>
+        <section class="grid-3">${metricCards(data.gscCards)}</section>
+
+        <section class="realtime-wrap">
+          <div class="realtime-card">
+            <h2>Realtime 概況</h2>
+            <span class="live"><i></i> 即時流量</span>
+            <div class="big-num">${data.realtime.active_30m}</div>
+            <div class="sub">最近 30 分鐘</div>
+            <div class="big-num" style="font-size:26px;margin-top:20px">${data.realtime.active_5m}</div>
+            <div class="sub">最近 5 分鐘</div>
+          </div>
+          ${rankList('目前活躍頁面', data.realtime.top_pages, 'title', 'activeUsers')}
+        </section>
+
+        <section class="section">
+          <div class="panel">
+            <h2>GA4 每日趨勢</h2>
+            <div class="mini-chart">${trendBars(data.charts.labels, data.charts.sessions, data.charts.views)}</div>
+            <div class="footer-note">藍色 = sessions ｜ 青色 = views</div>
+          </div>
+          <div class="panel">
+            <h2>裝置分布</h2>
+            <div class="legend">${deviceLegend(data.deviceLegend)}</div>
+            <div class="footer-note">依來源 payload 預先計算百分比，前端只負責渲染。</div>
+          </div>
+        </section>
+
+        <section class="list-grid">
+          ${rankList('熱門頁面', data.topPages, 'title', 'views')}
+          ${rankList('來源排行', data.referrals, 'name', 'value')}
+          ${rankList('國家排行', data.countries, 'name', 'value')}
+          ${rankList('GSC 熱門查詢', data.gscQueries, 'label', 'value')}
+          ${rankList('GSC 熱門頁面', data.gscPages, 'label', 'value')}
+          ${rankList('裝置型號', data.deviceModels, 'name', 'value')}
+        </section>
+
+        <section class="panel">
+          <h2>新客 vs 回訪</h2>
+          <div class="split">
+            <div><strong>${data.newVsReturning.new_pct}%</strong><div class="sub">新客</div></div>
+            <div><strong>${data.newVsReturning.returning_pct}%</strong><div class="sub">回訪</div></div>
+          </div>
+          <div class="progress"><span style="width:${data.newVsReturning.new_pct}%"></span></div>
+          <div class="footer-note">新客 ${data.newVsReturning.new} ｜ 回訪 ${data.newVsReturning.returning}</div>
+        </section>
+      `;
+    }
+
+    loadPayload().then(render).catch(err => {
+      document.getElementById('app').innerHTML = `<div class="hero-card"><h1>載入失敗</h1><p>${err.message}</p></div>`;
+    });
+  </script>
+</body>
+</html>
