@@ -1,0 +1,612 @@
+{
+  "status": "ok",
+  "statusLabel": "資料已同步",
+  "statusMessage": "GA4 與 GSC 指標已完成更新",
+  "rangeLabel": "近 28 天 (2026-06-10 ~ 2026-07-07)",
+  "gscSite": "https://www.beonesexhealth.com/",
+  "overviewCards": [
+    {
+      "label": "工作階段",
+      "value": "3,226",
+      "sub": "GA4 sessions",
+      "change": "-6.7%",
+      "direction": "down",
+      "tone": "bad"
+    },
+    {
+      "label": "使用者",
+      "value": "2,440",
+      "sub": "GA4 totalUsers",
+      "change": "-2.7%",
+      "direction": "down",
+      "tone": "bad"
+    },
+    {
+      "label": "瀏覽量",
+      "value": "6,109",
+      "sub": "GA4 screenPageViews",
+      "change": "-7.8%",
+      "direction": "down",
+      "tone": "bad"
+    }
+  ],
+  "gscCards": [
+    {
+      "label": "搜尋點擊",
+      "value": "1,590",
+      "sub": "GSC clicks"
+    },
+    {
+      "label": "搜尋曝光",
+      "value": "47,375",
+      "sub": "GSC impressions"
+    },
+    {
+      "label": "CTR",
+      "value": "3.36%",
+      "sub": "GSC ctr"
+    }
+  ],
+  "countries": [
+    {
+      "name": "Taiwan",
+      "value": "1,545",
+      "icon": "🇹🇼"
+    },
+    {
+      "name": "China",
+      "value": "310",
+      "icon": "🇨🇳"
+    },
+    {
+      "name": "Singapore",
+      "value": "188",
+      "icon": "🇸🇬"
+    },
+    {
+      "name": "United States",
+      "value": "153",
+      "icon": "🇺🇸"
+    },
+    {
+      "name": "Hong Kong",
+      "value": "58",
+      "icon": "🇭🇰"
+    },
+    {
+      "name": "Malaysia",
+      "value": "49",
+      "icon": "🇲🇾"
+    },
+    {
+      "name": "Japan",
+      "value": "31",
+      "icon": "🇯🇵"
+    },
+    {
+      "name": "Sweden",
+      "value": "13",
+      "icon": "🇸🇪"
+    },
+    {
+      "name": "(not set)",
+      "value": "11",
+      "icon": "🌐"
+    },
+    {
+      "name": "Canada",
+      "value": "9",
+      "icon": "🇨🇦"
+    }
+  ],
+  "referrals": [
+    {
+      "name": "google",
+      "value": "1,718",
+      "icon": "🔎"
+    },
+    {
+      "name": "(direct)",
+      "value": "1,016",
+      "icon": "➡️"
+    },
+    {
+      "name": "reurl.cc",
+      "value": "225",
+      "icon": "↗️"
+    },
+    {
+      "name": "direct",
+      "value": "100",
+      "icon": "➡️"
+    },
+    {
+      "name": "facebook.com",
+      "value": "31",
+      "icon": "📘"
+    },
+    {
+      "name": "m.facebook.com",
+      "value": "29",
+      "icon": "📘"
+    },
+    {
+      "name": "bing",
+      "value": "26",
+      "icon": "🔍"
+    },
+    {
+      "name": "beoneyutsai.mystrikingly.com",
+      "value": "21",
+      "icon": "↗️"
+    },
+    {
+      "name": "beone.tw",
+      "value": "16",
+      "icon": "↗️"
+    },
+    {
+      "name": "l.facebook.com",
+      "value": "15",
+      "icon": "📘"
+    }
+  ],
+  "topPages": [
+    {
+      "title": "荷光性諮商性健康聯盟-呵護身心性靈",
+      "views": "646"
+    },
+    {
+      "title": "心理諮商師: 專業安心陪你性與親密探索-荷光性諮商性健康聯盟",
+      "views": "402"
+    },
+    {
+      "title": "性諮商: 性諮商是什麼?與諮商差異-荷光性諮商性健康聯盟",
+      "views": "260"
+    },
+    {
+      "title": "幼兒生理反應: 孩子在自慰嗎?︱親職性諮商-荷光性諮商性健康聯盟",
+      "views": "240"
+    },
+    {
+      "title": "女性生理需求: 女性自慰擔憂︱成人性諮商-荷光性諮商性健康聯盟",
+      "views": "222"
+    },
+    {
+      "title": "課程與工作坊 - 荷光性諮商性健康聯盟",
+      "views": "212"
+    },
+    {
+      "title": "能力建構取向系統: 如何成為AI時代內在鍛鍊之路-荷光性諮商性健康聯盟",
+      "views": "165"
+    },
+    {
+      "title": "預約心理諮商: 超越表層性問題呵護身心性靈-荷光性諮商性健康聯盟",
+      "views": "164"
+    },
+    {
+      "title": "能力建構取向: 身心性靈Ｘ呂嘉惠︱線上課程-荷光性諮商性健康聯盟",
+      "views": "151"
+    },
+    {
+      "title": "荷光介紹: 性健康發展-荷光性諮商性健康聯盟",
+      "views": "149"
+    }
+  ],
+  "deviceLegend": [
+    {
+      "label": "mobile",
+      "percent": "49%",
+      "color": "#63b9d1"
+    },
+    {
+      "label": "desktop",
+      "percent": "49%",
+      "color": "#5b24ff"
+    },
+    {
+      "label": "tablet",
+      "percent": "1%",
+      "color": "#1f7ae0"
+    }
+  ],
+  "deviceModels": [
+    {
+      "name": "iPhone",
+      "value": "1,002"
+    },
+    {
+      "name": "XQ-CC72",
+      "value": "35"
+    },
+    {
+      "name": "iPad",
+      "value": "29"
+    },
+    {
+      "name": "Pixel 7 Pro",
+      "value": "25"
+    },
+    {
+      "name": "SM-S9180",
+      "value": "20"
+    },
+    {
+      "name": "iPhone 15",
+      "value": "17"
+    },
+    {
+      "name": "iPhone 15 Pro",
+      "value": "12"
+    },
+    {
+      "name": "SM-A5660",
+      "value": "11"
+    },
+    {
+      "name": "SM-A5560",
+      "value": "10"
+    }
+  ],
+  "screenResolutions": [
+    {
+      "name": "1920x1080",
+      "value": "582"
+    },
+    {
+      "name": "393x852",
+      "value": "266"
+    },
+    {
+      "name": "390x844",
+      "value": "203"
+    },
+    {
+      "name": "402x874",
+      "value": "203"
+    },
+    {
+      "name": "1280x1200",
+      "value": "164"
+    },
+    {
+      "name": "1536x864",
+      "value": "149"
+    },
+    {
+      "name": "1440x900",
+      "value": "121"
+    },
+    {
+      "name": "1280x720",
+      "value": "100"
+    },
+    {
+      "name": "414x896",
+      "value": "90"
+    },
+    {
+      "name": "1470x956",
+      "value": "89"
+    }
+  ],
+  "newVsReturning": {
+    "new": 2285,
+    "returning": 317,
+    "new_pct": 88,
+    "returning_pct": 12
+  },
+  "charts": {
+    "labels": [
+      "06/10",
+      "06/11",
+      "06/12",
+      "06/13",
+      "06/14",
+      "06/15",
+      "06/16",
+      "06/17",
+      "06/18",
+      "06/19",
+      "06/20",
+      "06/21",
+      "06/22",
+      "06/23",
+      "06/24",
+      "06/25",
+      "06/26",
+      "06/27",
+      "06/28",
+      "06/29",
+      "06/30",
+      "07/01",
+      "07/02",
+      "07/03",
+      "07/04",
+      "07/05",
+      "07/06",
+      "07/07"
+    ],
+    "sessions": [
+      104,
+      118,
+      102,
+      84,
+      157,
+      159,
+      129,
+      162,
+      148,
+      87,
+      111,
+      94,
+      119,
+      144,
+      111,
+      128,
+      121,
+      85,
+      73,
+      116,
+      126,
+      112,
+      149,
+      101,
+      74,
+      99,
+      155,
+      119
+    ],
+    "views": [
+      204,
+      265,
+      209,
+      161,
+      315,
+      320,
+      260,
+      291,
+      240,
+      136,
+      200,
+      102,
+      228,
+      219,
+      244,
+      264,
+      196,
+      126,
+      112,
+      205,
+      297,
+      239,
+      273,
+      190,
+      100,
+      177,
+      259,
+      277
+    ],
+    "gscClicks": [
+      65,
+      57,
+      34,
+      44,
+      65,
+      53,
+      54,
+      77,
+      48,
+      47,
+      46,
+      42,
+      66,
+      60,
+      64,
+      47,
+      40,
+      46,
+      67,
+      65,
+      69,
+      70,
+      57,
+      37,
+      57,
+      72,
+      77,
+      64
+    ],
+    "gscImpressions": [
+      1634,
+      1308,
+      1295,
+      1421,
+      1377,
+      1418,
+      1425,
+      1391,
+      1275,
+      1399,
+      1515,
+      1686,
+      1691,
+      1655,
+      1513,
+      1560,
+      1862,
+      1688,
+      1778,
+      1630,
+      1901,
+      1633,
+      1908,
+      1641,
+      1812,
+      2011,
+      1967,
+      3981
+    ],
+    "gscPosition": [
+      9.7,
+      6.9,
+      8.1,
+      8.2,
+      7.4,
+      7.5,
+      8,
+      7.8,
+      8,
+      7.9,
+      7.7,
+      7.7,
+      7,
+      7.5,
+      7.1,
+      7.3,
+      8.4,
+      7.9,
+      7.4,
+      6.9,
+      7.4,
+      7.3,
+      7.9,
+      7.1,
+      7.2,
+      7.1,
+      7.2,
+      10.6
+    ],
+    "channelLabels": [
+      "Organic Search",
+      "Direct",
+      "Referral",
+      "Unassigned",
+      "Organic Social",
+      "AI Assistant",
+      "Email",
+      "Organic Video"
+    ],
+    "channelValues": [
+      1762,
+      1016,
+      285,
+      122,
+      79,
+      8,
+      2,
+      2
+    ],
+    "deviceLabels": [
+      "mobile",
+      "desktop",
+      "tablet"
+    ],
+    "deviceValues": [
+      49,
+      49,
+      1
+    ],
+    "deviceColors": [
+      "#63b9d1",
+      "#5b24ff",
+      "#1f7ae0"
+    ]
+  },
+  "realtime": {
+    "active_30m": 1,
+    "active_5m": 0,
+    "recentActiveUsers": 1,
+    "top_pages": [
+      {
+        "title": "女性生理需求: 女性自慰擔憂︱成人性諮商-荷光性諮商性健康聯盟",
+        "activeUsers": "1"
+      }
+    ]
+  },
+  "gscQueries": [
+    {
+      "label": "荷光",
+      "value": "145"
+    },
+    {
+      "label": "荷光性諮商性健康聯盟",
+      "value": "66"
+    },
+    {
+      "label": "女生自慰",
+      "value": "56"
+    },
+    {
+      "label": "林沛辰 諮商心理師",
+      "value": "23"
+    },
+    {
+      "label": "女性自慰",
+      "value": "18"
+    },
+    {
+      "label": "呂嘉惠",
+      "value": "16"
+    },
+    {
+      "label": "林沛辰",
+      "value": "15"
+    },
+    {
+      "label": "能力建構取向",
+      "value": "14"
+    },
+    {
+      "label": "賽可斯桌遊",
+      "value": "14"
+    },
+    {
+      "label": "李翊平",
+      "value": "13"
+    }
+  ],
+  "gscPages": [
+    {
+      "label": "https://www.beonesexhealth.com/womens-physiological-needs-worries/",
+      "value": "265"
+    },
+    {
+      "label": "https://www.beonesexhealth.com/",
+      "value": "238"
+    },
+    {
+      "label": "https://www.beonesexhealth.com/a-child-is-curious-about-body/",
+      "value": "202"
+    },
+    {
+      "label": "https://www.beonesexhealth.com/masturbation-in-marriage/",
+      "value": "79"
+    },
+    {
+      "label": "https://www.beonesexhealth.com/sex-counseling-psychologist-team-page/",
+      "value": "75"
+    },
+    {
+      "label": "https://www.beonesexhealth.com/product/sex-board-game/",
+      "value": "72"
+    },
+    {
+      "label": "https://www.beonesexhealth.com/pei-chen-lin/",
+      "value": "60"
+    },
+    {
+      "label": "https://www.beonesexhealth.com/know-the-names-of-sexual-organs-and-body/",
+      "value": "55"
+    },
+    {
+      "label": "https://www.beonesexhealth.com/yi-ping-lee/",
+      "value": "46"
+    },
+    {
+      "label": "https://www.beonesexhealth.com/secret-love/",
+      "value": "36"
+    }
+  ],
+  "warnings": []
+}
