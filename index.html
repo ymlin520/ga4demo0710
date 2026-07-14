@@ -12,6 +12,12 @@
     *{box-sizing:border-box}
     body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
     .wrap{max-width:1480px;margin:0 auto;padding:24px}
+    .topbar{display:flex;justify-content:flex-end;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px}
+    .refresh-btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:#fff;color:var(--blue);border-radius:999px;padding:10px 14px;font-size:12px;font-weight:900;cursor:pointer;box-shadow:0 8px 18px rgba(31,122,224,.08)}
+    .refresh-btn:hover{background:#f7fbff}
+    .refresh-btn:disabled{opacity:.6;cursor:wait}
+    .refresh-btn svg{width:14px;height:14px}
+    .refresh-status{font-size:12px;color:var(--muted);font-weight:700}
     .hero{display:grid;grid-template-columns:1.4fr .8fr;gap:16px;margin-bottom:18px}
     .hero-card,.panel,.metric-card,.list-card,.realtime-card{background:var(--card);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow)}
     .hero-card{padding:24px;background:linear-gradient(135deg,#e9f5ff 0%,#f8fcff 100%);position:relative;overflow:hidden}
@@ -70,9 +76,58 @@
 <body>
   <div class="wrap" id="app">載入中...</div>
   <script>
-    async function loadPayload(){
-      const res = await fetch('./payload.live.json');
+    async function loadPayload(bustCache){
+      const url = bustCache ? `./payload.live.json?t=${Date.now()}` : './payload.live.json';
+      const res = await fetch(url, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`讀取失敗（HTTP ${res.status}）`);
       return await res.json();
+    }
+
+    function formatUpdatedLabel(iso){
+      if (!iso) return '未知';
+      try {
+        return new Date(iso).toLocaleString('zh-TW', { timeZone: 'Asia/Taipei', hour12: false }) + '（台北時間）';
+      } catch (e) {
+        return iso;
+      }
+    }
+
+    function topbar(data){
+      return `
+        <div class="topbar">
+          <span class="refresh-status" id="lastUpdatedLabel">最後更新：${formatUpdatedLabel(data.generatedAt)}</span>
+          <button class="refresh-btn" id="manualRefreshBtn" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+            <span id="manualRefreshLabel">手動更新數據</span>
+          </button>
+          <span class="refresh-status" id="manualRefreshStatus"></span>
+        </div>
+      `;
+    }
+
+    async function doManualRefresh(){
+      const btn = document.getElementById('manualRefreshBtn');
+      const label = document.getElementById('manualRefreshLabel');
+      const status = document.getElementById('manualRefreshStatus');
+      btn.disabled = true;
+      label.textContent = '更新中...';
+      status.textContent = '正在讀取最新快照…';
+      try {
+        const data = await loadPayload(true);
+        render(data);
+        bindTopbar();
+        const freshStatus = document.getElementById('manualRefreshStatus');
+        if (freshStatus) freshStatus.textContent = '已載入最新快照';
+      } catch (err) {
+        label.textContent = '手動更新數據';
+        btn.disabled = false;
+        status.textContent = err.message || '更新失敗，請稍後再試';
+      }
+    }
+
+    function bindTopbar(){
+      const btn = document.getElementById('manualRefreshBtn');
+      if (btn) btn.addEventListener('click', doManualRefresh);
     }
 
     function metricCards(cards){
@@ -125,6 +180,7 @@
     function render(data){
       const app = document.getElementById('app');
       app.innerHTML = `
+        ${topbar(data)}
         <section class="hero">
           <div class="hero-card">
             <div class="pill-row">
@@ -197,7 +253,10 @@
       `;
     }
 
-    loadPayload().then(render).catch(err => {
+    loadPayload().then(data => {
+      render(data);
+      bindTopbar();
+    }).catch(err => {
       document.getElementById('app').innerHTML = `<div class="hero-card"><h1>載入失敗</h1><p>${err.message}</p></div>`;
     });
   </script>

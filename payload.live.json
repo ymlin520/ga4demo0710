@@ -1,31 +1,32 @@
 {
   "status": "ok",
+  "generatedAt": "2026-07-14T02:51:25.955Z",
   "statusLabel": "資料已同步",
   "statusMessage": "GA4 與 GSC 指標已完成更新",
-  "rangeLabel": "近 28 天 (2026-06-10 ~ 2026-07-07)",
+  "rangeLabel": "近 28 天 (2026-06-14 ~ 2026-07-11)",
   "gscSite": "https://www.beonesexhealth.com/",
   "overviewCards": [
     {
       "label": "工作階段",
-      "value": "3,226",
+      "value": "3,306",
       "sub": "GA4 sessions",
-      "change": "-6.7%",
+      "change": "-1.1%",
       "direction": "down",
       "tone": "bad"
     },
     {
       "label": "使用者",
-      "value": "2,440",
+      "value": "2,525",
       "sub": "GA4 totalUsers",
-      "change": "-2.7%",
-      "direction": "down",
-      "tone": "bad"
+      "change": "+2.9%",
+      "direction": "up",
+      "tone": "good"
     },
     {
       "label": "瀏覽量",
-      "value": "6,109",
+      "value": "6,042",
       "sub": "GA4 screenPageViews",
-      "change": "-7.8%",
+      "change": "-5.1%",
       "direction": "down",
       "tone": "bad"
     }
@@ -33,101 +34,101 @@
   "gscCards": [
     {
       "label": "搜尋點擊",
-      "value": "1,590",
+      "value": "1,619",
       "sub": "GSC clicks"
     },
     {
       "label": "搜尋曝光",
-      "value": "47,375",
+      "value": "49,455",
       "sub": "GSC impressions"
     },
     {
       "label": "CTR",
-      "value": "3.36%",
+      "value": "3.27%",
       "sub": "GSC ctr"
     }
   ],
   "countries": [
     {
       "name": "Taiwan",
-      "value": "1,545",
+      "value": "1,558",
       "icon": "🇹🇼"
     },
     {
       "name": "China",
-      "value": "310",
+      "value": "341",
       "icon": "🇨🇳"
     },
     {
       "name": "Singapore",
-      "value": "188",
+      "value": "201",
       "icon": "🇸🇬"
     },
     {
       "name": "United States",
-      "value": "153",
+      "value": "159",
       "icon": "🇺🇸"
     },
     {
       "name": "Hong Kong",
-      "value": "58",
+      "value": "66",
       "icon": "🇭🇰"
     },
     {
       "name": "Malaysia",
-      "value": "49",
+      "value": "55",
       "icon": "🇲🇾"
     },
     {
       "name": "Japan",
-      "value": "31",
+      "value": "34",
       "icon": "🇯🇵"
     },
     {
       "name": "Sweden",
-      "value": "13",
+      "value": "14",
       "icon": "🇸🇪"
     },
     {
       "name": "(not set)",
-      "value": "11",
+      "value": "12",
       "icon": "🌐"
     },
     {
-      "name": "Canada",
+      "name": "Ireland",
       "value": "9",
-      "icon": "🇨🇦"
+      "icon": "🇮🇪"
     }
   ],
   "referrals": [
     {
       "name": "google",
-      "value": "1,718",
+      "value": "1,721",
       "icon": "🔎"
     },
     {
       "name": "(direct)",
-      "value": "1,016",
+      "value": "1,042",
       "icon": "➡️"
     },
     {
       "name": "reurl.cc",
-      "value": "225",
+      "value": "212",
       "icon": "↗️"
     },
     {
       "name": "direct",
-      "value": "100",
+      "value": "121",
       "icon": "➡️"
     },
     {
-      "name": "facebook.com",
-      "value": "31",
+      "name": "m.facebook.com",
+      "value": "35",
       "icon": "📘"
     },
     {
-      "name": "m.facebook.com",
-      "value": "29",
+      "name": "facebook.com",
+      "value": "33",
       "icon": "📘"
     },
     {
@@ -136,73 +137,73 @@
       "icon": "🔍"
     },
     {
-      "name": "beoneyutsai.mystrikingly.com",
-      "value": "21",
+      "name": "beone.tw",
+      "value": "18",
       "icon": "↗️"
     },
     {
-      "name": "beone.tw",
-      "value": "16",
+      "name": "organic",
+      "value": "18",
       "icon": "↗️"
     },
     {
       "name": "l.facebook.com",
-      "value": "15",
+      "value": "16",
       "icon": "📘"
     }
   ],
   "topPages": [
     {
       "title": "荷光性諮商性健康聯盟-呵護身心性靈",
-      "views": "646"
+      "views": "630"
     },
     {
       "title": "心理諮商師: 專業安心陪你性與親密探索-荷光性諮商性健康聯盟",
-      "views": "402"
-    },
-    {
-      "title": "性諮商: 性諮商是什麼?與諮商差異-荷光性諮商性健康聯盟",
-      "views": "260"
+      "views": "377"
     },
     {
       "title": "幼兒生理反應: 孩子在自慰嗎?︱親職性諮商-荷光性諮商性健康聯盟",
-      "views": "240"
+      "views": "266"
     },
     {
       "title": "女性生理需求: 女性自慰擔憂︱成人性諮商-荷光性諮商性健康聯盟",
-      "views": "222"
+      "views": "257"
+    },
+    {
+      "title": "性諮商: 性諮商是什麼?與諮商差異-荷光性諮商性健康聯盟",
+      "views": "254"
     },
     {
       "title": "課程與工作坊 - 荷光性諮商性健康聯盟",
-      "views": "212"
-    },
-    {
-      "title": "能力建構取向系統: 如何成為AI時代內在鍛鍊之路-荷光性諮商性健康聯盟",
-      "views": "165"
-    },
-    {
-      "title": "預約心理諮商: 超越表層性問題呵護身心性靈-荷光性諮商性健康聯盟",
-      "views": "164"
+      "views": "210"
     },
     {
       "title": "能力建構取向: 身心性靈Ｘ呂嘉惠︱線上課程-荷光性諮商性健康聯盟",
-      "views": "151"
+      "views": "152"
+    },
+    {
+      "title": "預約心理諮商: 超越表層性問題呵護身心性靈-荷光性諮商性健康聯盟",
+      "views": "152"
+    },
+    {
+      "title": "能力建構取向系統: 如何成為AI時代內在鍛鍊之路-荷光性諮商性健康聯盟",
+      "views": "141"
     },
     {
       "title": "荷光介紹: 性健康發展-荷光性諮商性健康聯盟",
-      "views": "149"
+      "views": "138"
     }
   ],
   "deviceLegend": [
     {
-      "label": "mobile",
-      "percent": "49%",
-      "color": "#63b9d1"
-    },
-    {
       "label": "desktop",
       "percent": "49%",
       "color": "#5b24ff"
+    },
+    {
+      "label": "mobile",
+      "percent": "49%",
+      "color": "#63b9d1"
     },
     {
       "label": "tablet",
@@ -213,7 +214,7 @@
   "deviceModels": [
     {
       "name": "iPhone",
-      "value": "1,002"
+      "value": "988"
     },
     {
       "name": "XQ-CC72",
@@ -221,87 +222,83 @@
     },
     {
       "name": "iPad",
-      "value": "29"
+      "value": "33"
     },
     {
       "name": "Pixel 7 Pro",
-      "value": "25"
-    },
-    {
-      "name": "SM-S9180",
-      "value": "20"
+      "value": "21"
     },
     {
       "name": "iPhone 15",
+      "value": "19"
+    },
+    {
+      "name": "SM-S9180",
       "value": "17"
     },
     {
-      "name": "iPhone 15 Pro",
-      "value": "12"
-    },
-    {
-      "name": "SM-A5660",
-      "value": "11"
+      "name": "Nexus 5",
+      "value": "13"
     },
     {
       "name": "SM-A5560",
-      "value": "10"
+      "value": "13"
+    },
+    {
+      "name": "SM-A5660",
+      "value": "13"
     }
   ],
   "screenResolutions": [
     {
       "name": "1920x1080",
-      "value": "582"
+      "value": "595"
     },
     {
       "name": "393x852",
-      "value": "266"
+      "value": "249"
     },
     {
       "name": "390x844",
-      "value": "203"
+      "value": "200"
     },
     {
       "name": "402x874",
-      "value": "203"
+      "value": "198"
     },
     {
       "name": "1280x1200",
-      "value": "164"
+      "value": "179"
     },
     {
       "name": "1536x864",
-      "value": "149"
+      "value": "148"
     },
     {
       "name": "1440x900",
-      "value": "121"
+      "value": "113"
     },
     {
       "name": "1280x720",
-      "value": "100"
-    },
-    {
-      "name": "414x896",
-      "value": "90"
+      "value": "96"
     },
     {
       "name": "1470x956",
-      "value": "89"
+      "value": "92"
+    },
+    {
+      "name": "440x956",
+      "value": "87"
     }
   ],
   "newVsReturning": {
-    "new": 2285,
-    "returning": 317,
+    "new": 2370,
+    "returning": 316,
     "new_pct": 88,
     "returning_pct": 12
   },
   "charts": {
     "labels": [
-      "06/10",
-      "06/11",
-      "06/12",
-      "06/13",
       "06/14",
       "06/15",
       "06/16",
@@ -325,13 +322,13 @@
       "07/04",
       "07/05",
       "07/06",
-      "07/07"
+      "07/07",
+      "07/08",
+      "07/09",
+      "07/10",
+      "07/11"
     ],
     "sessions": [
-      104,
-      118,
-      102,
-      84,
       157,
       159,
       129,
@@ -355,13 +352,13 @@
       74,
       99,
       155,
-      119
+      119,
+      120,
+      130,
+      93,
+      115
     ],
     "views": [
-      204,
-      265,
-      209,
-      161,
       315,
       320,
       260,
@@ -385,13 +382,13 @@
       100,
       177,
       259,
-      277
+      277,
+      184,
+      214,
+      172,
+      202
     ],
     "gscClicks": [
-      65,
-      57,
-      34,
-      44,
       65,
       53,
       54,
@@ -415,13 +412,13 @@
       57,
       72,
       77,
-      64
+      64,
+      62,
+      61,
+      48,
+      58
     ],
     "gscImpressions": [
-      1634,
-      1308,
-      1295,
-      1421,
       1377,
       1418,
       1425,
@@ -445,13 +442,13 @@
       1812,
       2011,
       1967,
-      3981
+      3981,
+      1860,
+      1794,
+      1991,
+      2093
     ],
     "gscPosition": [
-      9.7,
-      6.9,
-      8.1,
-      8.2,
       7.4,
       7.5,
       8,
@@ -475,7 +472,11 @@
       7.2,
       7.1,
       7.2,
-      10.6
+      10.6,
+      7.6,
+      7.9,
+      7.9,
+      7.5
     ],
     "channelLabels": [
       "Organic Search",
@@ -488,18 +489,18 @@
       "Organic Video"
     ],
     "channelValues": [
-      1762,
-      1016,
-      285,
-      122,
-      79,
+      1761,
+      1042,
+      275,
+      150,
+      91,
       8,
       2,
       2
     ],
     "deviceLabels": [
-      "mobile",
       "desktop",
+      "mobile",
       "tablet"
     ],
     "deviceValues": [
@@ -508,8 +509,8 @@
       1
     ],
     "deviceColors": [
-      "#63b9d1",
       "#5b24ff",
+      "#63b9d1",
       "#1f7ae0"
     ]
   },
@@ -519,23 +520,23 @@
     "recentActiveUsers": 4,
     "top_pages": [
       {
-        "title": "女性生理需求: 女性自慰擔憂︱成人性諮商-荷光性諮商性健康聯盟",
-        "activeUsers": "1"
-      },
-      {
-        "title": "如何跟青少年談性: 性困擾處理︱青少年諮商-荷光性諮商性健康聯盟",
-        "activeUsers": "1"
-      },
-      {
-        "title": "幼兒生理反應: 孩子在自慰嗎?︱親職性諮商-荷光性諮商性健康聯盟",
-        "activeUsers": "1"
-      },
-      {
-        "title": "心理諮商師: 專業安心陪你性與親密探索-荷光性諮商性健康聯盟",
-        "activeUsers": "1"
-      },
-      {
         "title": "荷光性諮商性健康聯盟-呵護身心性靈",
+        "activeUsers": "3"
+      },
+      {
+        "title": "PTP覺察轉化練功: 從焦慮到對位，讓生命開始生成-能力建構取向",
+        "activeUsers": "1"
+      },
+      {
+        "title": "PTP覺察轉化練功: 從雜訊到和諧，每日內在調音-能力建構取向",
+        "activeUsers": "1"
+      },
+      {
+        "title": "〈身心性靈文章 〉彙整頁面 - 荷光性諮商性健康聯盟",
+        "activeUsers": "1"
+      },
+      {
+        "title": "【線上】成人性教育基礎課程 - 荷光性諮商性健康聯盟",
         "activeUsers": "1"
       }
     ]
@@ -543,85 +544,85 @@
   "gscQueries": [
     {
       "label": "荷光",
-      "value": "145"
+      "value": "148"
     },
     {
       "label": "荷光性諮商性健康聯盟",
-      "value": "66"
+      "value": "62"
     },
     {
       "label": "女生自慰",
-      "value": "56"
+      "value": "58"
     },
     {
       "label": "林沛辰 諮商心理師",
-      "value": "23"
+      "value": "20"
     },
     {
       "label": "女性自慰",
-      "value": "18"
-    },
-    {
-      "label": "呂嘉惠",
-      "value": "16"
-    },
-    {
-      "label": "林沛辰",
-      "value": "15"
+      "value": "17"
     },
     {
       "label": "能力建構取向",
-      "value": "14"
+      "value": "17"
+    },
+    {
+      "label": "呂嘉惠",
+      "value": "15"
     },
     {
       "label": "賽可斯桌遊",
-      "value": "14"
+      "value": "15"
+    },
+    {
+      "label": "林沛辰",
+      "value": "13"
     },
     {
       "label": "李翊平",
-      "value": "13"
+      "value": "11"
     }
   ],
   "gscPages": [
     {
       "label": "https://www.beonesexhealth.com/womens-physiological-needs-worries/",
-      "value": "265"
+      "value": "297"
     },
     {
       "label": "https://www.beonesexhealth.com/",
-      "value": "238"
+      "value": "236"
     },
     {
       "label": "https://www.beonesexhealth.com/a-child-is-curious-about-body/",
-      "value": "202"
-    },
-    {
-      "label": "https://www.beonesexhealth.com/masturbation-in-marriage/",
-      "value": "79"
-    },
-    {
-      "label": "https://www.beonesexhealth.com/sex-counseling-psychologist-team-page/",
-      "value": "75"
+      "value": "219"
     },
     {
       "label": "https://www.beonesexhealth.com/product/sex-board-game/",
-      "value": "72"
+      "value": "80"
     },
     {
-      "label": "https://www.beonesexhealth.com/pei-chen-lin/",
-      "value": "60"
+      "label": "https://www.beonesexhealth.com/masturbation-in-marriage/",
+      "value": "73"
+    },
+    {
+      "label": "https://www.beonesexhealth.com/sex-counseling-psychologist-team-page/",
+      "value": "69"
     },
     {
       "label": "https://www.beonesexhealth.com/know-the-names-of-sexual-organs-and-body/",
-      "value": "55"
+      "value": "51"
+    },
+    {
+      "label": "https://www.beonesexhealth.com/pei-chen-lin/",
+      "value": "47"
     },
     {
       "label": "https://www.beonesexhealth.com/yi-ping-lee/",
-      "value": "46"
+      "value": "45"
     },
     {
-      "label": "https://www.beonesexhealth.com/secret-love/",
-      "value": "36"
+      "label": "https://www.beonesexhealth.com/deal-with-sexual-distress-in-adolescents/",
+      "value": "33"
     }
   ],
   "warnings": []

@@ -256,6 +256,7 @@ async function buildDashboardPayload(oauth2Client, { propertyId, siteUrl }) {
 
   return {
     status: ga4Ok || gscOk ? 'ok' : 'error',
+    generatedAt: new Date().toISOString(),
     statusLabel: ga4Ok && gscOk ? '資料已同步' : '部分來源失敗',
     statusMessage: warnings.length ? warnings.join(' | ') : 'GA4 與 GSC 指標已完成更新',
     rangeLabel: `近 28 天 (${rangeStart} ~ ${rangeEnd})`,
