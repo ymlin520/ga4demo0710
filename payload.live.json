@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "generatedAt": "2026-07-14T02:51:25.955Z",
+  "generatedAt": "2026-07-14T02:59:07.348Z",
   "statusLabel": "資料已同步",
   "statusMessage": "GA4 與 GSC 指標已完成更新",
   "rangeLabel": "近 28 天 (2026-06-14 ~ 2026-07-11)",
@@ -515,29 +515,29 @@
     ]
   },
   "realtime": {
-    "active_30m": 4,
-    "active_5m": 0,
-    "recentActiveUsers": 4,
+    "active_30m": 61,
+    "active_5m": 133,
+    "recentActiveUsers": 61,
     "top_pages": [
+      {
+        "title": "你在哪一個次元? - 荷光性諮商性健康聯盟",
+        "activeUsers": "48"
+      },
+      {
+        "title": "伴侶覺察測驗: 你的伴侶關係在哪一個次元?-荷光性諮商性健康聯盟",
+        "activeUsers": "12"
+      },
+      {
+        "title": "職場覺察測驗: 你的職場模式在哪一個次元?-荷光性諮商性健康聯盟",
+        "activeUsers": "8"
+      },
+      {
+        "title": "親子覺察測驗: 你的教養在哪一個次元?-荷光性諮商性健康聯盟",
+        "activeUsers": "7"
+      },
       {
         "title": "荷光性諮商性健康聯盟-呵護身心性靈",
         "activeUsers": "3"
-      },
-      {
-        "title": "PTP覺察轉化練功: 從焦慮到對位，讓生命開始生成-能力建構取向",
-        "activeUsers": "1"
-      },
-      {
-        "title": "PTP覺察轉化練功: 從雜訊到和諧，每日內在調音-能力建構取向",
-        "activeUsers": "1"
-      },
-      {
-        "title": "〈身心性靈文章 〉彙整頁面 - 荷光性諮商性健康聯盟",
-        "activeUsers": "1"
-      },
-      {
-        "title": "【線上】成人性教育基礎課程 - 荷光性諮商性健康聯盟",
-        "activeUsers": "1"
       }
     ]
   },
